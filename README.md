@@ -10,7 +10,7 @@ Projeto realizado durante o curso fullstack da Gama Academy + StarTech.
  
 <ul>
  <li>
-    Landin Page disponível: https://jobssnet.herokuapp.com/
+    LandinG Page disponível: https://jobssnet.herokuapp.com/
  </li>
 </ul> 
  
