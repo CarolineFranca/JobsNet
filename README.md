@@ -25,7 +25,7 @@ Projeto realizado durante o curso fullstack da Gama Academy + StarTech.
     Abrir a pasta no terminal e digitar <strong>npm install</strong>, para que instale as dependências usadas no projeto.
  </li>
  <li> 
-   Após a instalação, criar umm arquivo <strong> .env </strong>, incluir <strong> PORT=3000 </strong> e <strong> DB =link_do_banco_de_dados </strong>
+   Após a instalação, criar um arquivo <strong> .env </strong>, incluir <strong> PORT=3000 </strong> e <strong> DB =link_do_banco_de_dados </strong>
  </li>
 </ul> 
 
@@ -36,7 +36,7 @@ Projeto realizado durante o curso fullstack da Gama Academy + StarTech.
 
 ### FrontEnd
 <strong>  Fase 1 -  Criação da Página </strong> <br> 
-        Apresentar a estrutura do projeto no github;
+        Apresentar a estrutura do projeto no github; <br>
         Landing page com formulário para preenchimento de candidatura. <br>
         Não existe uma regra para o layout da página, use a imaginação com todos os conhecimentos adquiridos no front-end
 <br> <br>
