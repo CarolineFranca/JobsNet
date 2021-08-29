@@ -25,7 +25,7 @@ Projeto realizado durante o curso fullstack da Gama Academy + StarTech.
     Abrir a pasta no terminal e digitar <strong>npm install</strong>, para que instale as dependências usadas no projeto.
  </li>
  <li> 
-   Após a instalação, criar umm arquivo <strong> .env </strong>, incluir <strong> PORT=3000 </strong> e <strong> DB = <link do banco de dados> </strong>
+   Após a instalação, criar umm arquivo <strong> .env </strong>, incluir <strong> PORT=3000 </strong> e <strong> DB =link_do_banco_de_dados </strong>
  </li>
  <li> 
   Caso queira testar usando o Swagger, basta acessar <string>/docs ou <a> </a> </string> que o mesmo está disponivel. 
