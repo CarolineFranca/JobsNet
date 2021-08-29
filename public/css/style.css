@@ -1,0 +1,462 @@
+:root{
+    --pink: #F25287;
+    --grey: #2B2B2B;
+    --font: #fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+body{
+    color: #fff;
+    background-color: var(--grey);
+}
+
+
+/* MENU SUPERIOR HEADER */
+
+header{
+    background-color: var(--pink);
+    width: 100%;
+    height: 6.5vh;
+    padding: 3px 20px;
+
+    top: 0;
+    z-index: 999;
+}
+
+.navbar{
+    max-width: 87.5vw;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar h1{
+    width: 50px;
+    height: 50px;
+}
+
+.hamburguer{
+    width: 30px;
+    height: 30px;
+
+    background-color: transparent;
+    border-radius: 5px;
+    border: 0;
+
+    position: relative;
+    cursor: pointer;
+
+    display: none;
+}
+
+.navbar .hamburguer:after{
+    content: "";
+
+    position: absolute;
+    top: 15%;
+    left: 15%;
+
+    width: 100%;
+    height: 10%;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.navbar .hamburguer:before{
+    content: "";
+
+    position: absolute;
+    top: 45%;
+    left: 15%;
+
+    width: 100%;
+    height: 10%;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.menu{
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.menu li{
+    margin-left: 10px;
+}
+
+.menu li a{
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--font);
+    transition: .5s;
+    text-align: center
+}
+.menu li a:hover{
+    color: var(--grey);
+}
+
+/* Responsividade Menu Header  */
+
+@media screen and (max-width: 980px){
+
+    .navbar h1{
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .hamburguer{
+        display: block;
+        z-index: 999;
+        margin-bottom: 10px;
+    }
+
+    .menu{
+        position: fixed;
+        top: 0;
+        right: -100%;
+
+        height: 100vh;
+        margin: 0;
+        background-color: var(--grey);
+
+        width: 50%;
+        max-width: 250px;
+        padding: 100px 20px;
+
+        flex-direction: column;
+    }
+
+    .menu li a:hover{
+        color: var(--pink);
+    }
+
+    .menu.active{
+        right: 0;
+    }
+
+}
+
+
+/* * CONTEUDO DA PAGINA 1 - BEM VINDO  */
+
+#pagina1{
+    display: grid;
+    grid-template-columns: 40fr 60fr;
+    padding: 10em;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#pagina1 img{
+    width: 30vw;
+    margin: 6em;
+    margin-left: 2em;
+    grid-column: 1;
+}
+
+#pagina1 button{
+    grid-column: 2;
+    grid-row: 1;
+    width: 25vw;
+    height: 10vh;
+    margin: auto;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--pink);
+    color: var(--grey);
+    font-size: 1.7em;
+    font-weight: 600;
+    cursor: pointer;    
+    padding: 2px;
+}
+
+#pagina1 button:hover{
+    background-color: var(--font);
+    color: var(--grey);
+    transition: 0.7s ease-in-out;
+}
+
+/* Responsividade Pagina 1 */
+
+@media screen and (max-width: 900px) {
+    #pagina1{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #pagina1 img{
+        width: 55vw;
+        margin: auto;
+        margin-top: 40px;
+    }
+
+    #pagina1 span{
+        font-size: 1.5em;
+        text-align: center;
+        margin: auto;
+        margin-top: 3em;
+    }
+
+    #pagina1 button{
+        width: 80vw;
+        font-size: 1.5em;
+        margin-top: 3em;
+        margin-bottom: 2em;
+    }
+}
+
+
+
+/* CONTEUDO DO FORMULARIO  */
+
+
+#pagina2{
+    display: none;
+}
+
+.container{
+    margin: auto;
+    width: 80vw;    
+    background-color: rgba(102, 102, 102, 0.336);
+}
+
+.divAll{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    padding: 2em;
+    margin: auto;
+}
+
+.nome-cargo,
+.email-cel,
+.telFixo,
+.cep-endereco-num,
+.complemento-cidade{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nome-cargo input,
+.email-cel input{
+    width: 30vw;
+}
+
+.div-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.div-column input{
+    border: none;
+    border-bottom: 3px solid var(--pink);
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--font);
+    margin-top: 10px;
+}
+
+.nasc-estado-genero,
+.enderecos{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;   
+}
+
+.genero label,
+.estadoCivil label{
+    margin-bottom: 7px;
+}
+
+.dataN input,
+.genero select,
+.estadoCivil select,
+.veic-habi div select{
+    width: 12vw;
+    height: 5vh;
+    background-color: var(--pink);
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    padding-left: 5px;
+    color: var(--font);
+    
+}
+
+.contatos{    
+    border-top: 2px solid rgba(255, 255, 255, 0.171);
+    padding-top: 1em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.email-cel input{
+    margin-bottom: 30px;
+}
+
+.telFixo input,
+.cep-endereco-num input{
+    width: 18vw;
+}
+
+
+.complemento-cidade input{
+    width: 13vw;
+}
+
+.opcional{
+    color: var(--pink);
+    font-size: 0.7em;
+}
+
+.enderecos{
+    border-top: 2px solid rgba(255, 255, 255, 0.171);
+    padding-top: 1em;
+    margin-top: 25px;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.complemento-cidade{
+    margin-top: 2em;
+}
+
+.documentos{
+    padding-top: 2em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+    margin-left: 19px;    
+}
+
+.identidade-cpf{
+    margin-right: 2em;
+}
+
+.identidade-cpf div input{
+    margin-bottom: 10px;
+}
+
+.cpf label{
+    margin-top: 15px;
+}
+
+.veic-habi div select{
+    margin-bottom: 5px;
+    margin-top: 4px;
+}
+
+.veic-habi div label{
+    margin-top: 7px;
+}
+
+.bttn{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#btn_enviar{
+    border: none;
+    width: 15vw;
+    height: 7vh;
+    border-radius: 5px;
+    background-color:var(--pink);
+    color: var(--font);
+    font-size: 1.3em;
+}
+
+#btn_enviar:hover{
+    background-color: #B6C867;
+    color: var(--grey);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+input{
+    font-size: 1.2em;
+    padding-left: 5px;
+}
+
+
+input:focus{
+    animation:  conteudo 1s forwards;
+    outline: none;
+
+}
+
+@keyframes conteudo {
+    0%{
+        background-color: transparent;
+    }
+    100%{
+        background-color: #F25287;
+    }
+} 
+
+label {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Responsividade */
+
+@media screen and (max-width: 690px){
+    #pagina2 div{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .divAll input{
+        margin-bottom: 10px;      
+        width: 100%        
+    }
+
+    .dataN input,
+    .estadoCivil select,
+    .genero select{
+        width: 25vh;
+        margin-bottom: 10px;
+    }
+
+    .documentos{
+        width: 100%;
+        margin: 0;
+    }
+
+    #veiculo,
+    #cnh{
+        width: 20vw;
+    }
+
+    #btn_enviar{
+        width: 60vw;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+}   

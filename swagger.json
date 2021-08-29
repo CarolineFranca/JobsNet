@@ -1,0 +1,128 @@
+{
+  "openapi": "3.0.0",
+
+
+  "info": {
+    "title": "API do projeto JobsNet - Curriculos (Gama Academy)",
+    "description": "API desenvolvidada para o projeto",
+    "version": "0.0.1"
+  },
+
+  "servers": [
+    {
+      "url": "http://localhost:5000",
+      "description": "ambiente de desenvolvimento"
+    }
+  ],
+
+  "paths": {
+    "/register": {
+      "post": {
+        "summary": "Cadastro de candidato",
+        "description": "Rota de cadastro de candidato, recebe: Rota de cadastro de usuário; recebe: nome, cargo, dataNascimento, genero, estadoCivil, CEP, endereco, numero, cidade, bairro, estado, telefonefixo1, telefonefixo2, celular, contato, email, identidade, cpf, veiculo, habilitacao",
+        "tags": ["candidato"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "nameCompleto": {
+                    "type": "string"
+                  },
+                  "cargo": {
+                    "type": "string"
+                  },
+                  "dataNascimento": {
+                    "type": "string"
+                  },
+                  "estadoCivil": {
+                    "type": "string"
+                  },
+                  "genero": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "celular": {
+                    "type": "Number"
+                  },
+                  "telfixo1": {
+                    "type": "Number"
+                  },
+                  "telFixo2": {
+                    "type": "Number"
+                  },
+                  "telcontato": {
+                    "type": "Number"
+                  },
+                  "cep": {
+                    "type": "Number"
+                  },
+                  "endereco": {
+                    "type": "string"
+                  },
+                  "numero": {
+                    "type": "String"
+                  },
+                  "complemento": {
+                    "type": "String"
+                  },
+                  "cidade": {
+                    "type": "String"
+                  },
+                  "estado": {
+                    "type": "String"
+                  },
+                  "bairro": {
+                    "type": "String"
+                  },
+                  "identidade": {
+                    "type": "String"
+                  },
+                  "cpf": {
+                    "type": "String"
+                  },
+                  "veiculo": {
+                    "type": "String"
+                  },
+                  "habilitacao": {
+                    "type": "String"
+                  } 
+                }
+              },
+              "examples": {
+                "CandidatoQualquer": {
+                  "value": {
+                    "nomeCompleto": "Jéssica Angela",                                     
+                    "cargo": "Análista de Sistemas",                                     
+                    "dataNascimento": "240996",                                     
+                    "estadoCivil": "Solteiro(a)",         
+                    "genero": "Mulher Cis",     
+                    "email": "jessicabrittoeu@gmail.com",
+                    "celular": "11952527887",
+                    "telfixo1": "1220202020",
+                    "telfixo2": "2120398877",
+                    "telcontato": "8899999999",
+                    "cep": "00000000",
+                    "endereco": "Rua Gravata Rosa",
+                    "numero": "23",
+                    "complemento": "apt 03, bloco 03",
+                    "cidade": "Vinhedo",
+                    "estado": "SP",
+                    "bairro": "Jardins",
+                    "identidade": "9999999999",
+                    "cpf": "000000000000",
+                    "veiculo": "sim",
+                    "habilitacao": "sim"
+
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
