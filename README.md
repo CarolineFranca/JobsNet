@@ -27,9 +27,6 @@ Projeto realizado durante o curso fullstack da Gama Academy + StarTech.
  <li> 
    Após a instalação, criar umm arquivo <strong> .env </strong>, incluir <strong> PORT=3000 </strong> e <strong> DB =link_do_banco_de_dados </strong>
  </li>
- <li> 
-  Caso queira testar usando o Swagger, basta acessar <string>/docs ou <a> </a> </string> que o mesmo está disponivel. 
- </li>
 </ul> 
 
 
