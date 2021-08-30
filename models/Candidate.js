@@ -18,7 +18,7 @@ const cadidateSchema = {
     cidade: {type:  String, unique: false, required: true},
     estado: {type:  String, unique: false, required: false},
     bairro: {type: String, unique: false, required: true},
-    identidade: {type: String, unique: true, required: false},
+    identidade: {type: Number, unique: true, required: false},
     cpf: {type: String, unique: true, required: true},
     veiculo: {type: String, unique: false, required: false},
     habilitacao: {type: String, unique: false, required: false}
